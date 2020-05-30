@@ -17,6 +17,7 @@ public class main {
 	BeeCabinet cage = new BeeCabinet();
 	Scanner sc = new Scanner(System.in);
 	int choice = 0;
+	System.out.println("J1.S.P0081: 90 Points");
 	do {
 	    System.out.println("----BEE----");
 	    System.out.println("1. Create new bee list.");
