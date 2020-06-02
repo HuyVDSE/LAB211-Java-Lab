@@ -104,26 +104,32 @@ public class DoctorManagement extends ArrayList<Doctor> {
     }
 
     public void searchDoctor() {
-	ArrayList<Doctor> listDoctor = new ArrayList<>();
+	ArrayList<Doctor> listDoctorFoundByName = new ArrayList<>();
 	if (this.isEmpty()) {
 	    System.out.println("The list is empty!!");
 	} else {
 	    String name = Input.getString("Enter name: ");
-	    for (int i = 0; i < this.size(); i++) {
-		if (this.get(i).getName().contains(name)) {
-		    listDoctor.add(this.get(i));
-		}
-	    }
-	    if (listDoctor.isEmpty()) {
+	    listDoctorFoundByName = listDoctorFindByName(this, name);
+	    if (listDoctorFoundByName.isEmpty()) {
 		System.out.println("Not found!!");
 	    } else {
 		System.out.println("Here is the doctor you want to find");
 		System.out.println("|Code |Name           |Specialization |Availability|");
-		for (int i = 0; i < listDoctor.size(); i++) {
-		    listDoctor.get(i).print();
+		for (int i = 0; i < listDoctorFoundByName.size(); i++) {
+		    listDoctorFoundByName.get(i).print();
 		}
 	    }
 	}
+    }
+
+    public ArrayList<Doctor> listDoctorFindByName(ArrayList<Doctor> listDoctor,String name) {
+	ArrayList<Doctor> lDoctor = new ArrayList<>();
+	for (int i = 0; i < listDoctor.size(); i++) {
+	    if (listDoctor.get(i).getName().contains(name)) {
+		lDoctor.add(listDoctor.get(i));
+	    }
+	}
+	return lDoctor;
     }
 
     public void printAllInfo() {
