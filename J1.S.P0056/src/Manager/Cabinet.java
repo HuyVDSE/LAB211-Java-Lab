@@ -13,6 +13,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Collections;
+
 /**
  *
  * @author nhoxr
@@ -68,11 +69,9 @@ public class Cabinet {
 	    }
 	    if ((newSalary <= updateWorker.getSalary()) && upDown == 1) {
 		System.out.println("New Salary must greater than current salary");
-		return false;
 	    }
 	    if ((newSalary >= updateWorker.getSalary()) && upDown == 0) {
 		System.out.println("New Salary must less than current salary");
-		return false;
 	    }
 	} else {
 	    System.out.println("Not found!!");

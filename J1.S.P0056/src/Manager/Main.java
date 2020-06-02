@@ -33,17 +33,17 @@ public class Main {
 		    break;
 		case 2:
 		    Worker updateWorkerUp = cage.getWorkerToUpdate();
-		    do {
-			isValid = cage.updateSalary(updateWorkerUp, 1);
-		    } while (!isValid);
-		    cage.updateHistory(updateWorkerUp, "UP");
+		    isValid = cage.updateSalary(updateWorkerUp, 1);
+		    if (isValid) {
+			cage.updateHistory(updateWorkerUp, "UP");
+		    }
 		    break;
 		case 3:
 		    Worker updateWorkerDown = cage.getWorkerToUpdate();
-		    do {
-			cage.updateSalary(updateWorkerDown, 0);
-		    } while (!isValid);
-		    cage.updateHistory(updateWorkerDown, "DOWN");
+		    isValid = cage.updateSalary(updateWorkerDown, 0);
+		    if (isValid) {
+			cage.updateHistory(updateWorkerDown, "DOWN");
+		    }
 		    break;
 		case 4:
 		    cage.sortByID();
