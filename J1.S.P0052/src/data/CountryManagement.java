@@ -66,6 +66,11 @@ public class CountryManagement extends ArrayList<EastAsiaCountries> {
 	}
     }
 
+    /**
+     *use to find country, required user input name of country
+     * @param name
+     * @return Country
+     */
     public EastAsiaCountries searchCountryByName(String name) {
 	for (int i = 0; i < this.size(); i++) {
 	    if (this.get(i).getCountryName().equalsIgnoreCase(name)) {
