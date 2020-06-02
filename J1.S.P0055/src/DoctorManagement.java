@@ -100,7 +100,7 @@ public class DoctorManagement extends ArrayList<Doctor> {
 		System.out.println("Not found!!");
 	    } else {
 		System.out.println("Here is the doctor you want to find");
-		System.out.println("|Code |Name           |Specialization |Availability|");
+		System.out.println("|Code |Name           |Specialization|Availability|");
 		for (int i = 0; i < listDoctorFoundByName.size(); i++) {
 		    listDoctorFoundByName.get(i).print();
 		}
