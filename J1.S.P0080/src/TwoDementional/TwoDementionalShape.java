@@ -15,7 +15,7 @@ public abstract class TwoDementionalShape extends Shape {
 
     @Override
     public double getArea() {
-	return super.getArea();
+	return 0;
     }
 
     @Override
