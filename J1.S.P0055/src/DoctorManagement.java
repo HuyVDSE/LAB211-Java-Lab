@@ -118,16 +118,6 @@ public class DoctorManagement extends ArrayList<Doctor> {
 	return lDoctor;
     }
 
-    public void printAllInfo() {
-	if (this.isEmpty()) {
-	    System.out.println("The list is empty!!");
-	} else {
-	    for (int i = 0; i < this.size(); i++) {
-		this.get(i).print();
-	    }
-	}
-    }
-
     public void initDoctorData(){
 	this.add(new Doctor("DOC 1", "Nguyen Van A", "Nice", 3));
 	this.add(new Doctor("DOC 2", "Tran Thanh Son", "Nice", 5));
