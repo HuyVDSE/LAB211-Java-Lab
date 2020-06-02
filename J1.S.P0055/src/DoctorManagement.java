@@ -89,20 +89,6 @@ public class DoctorManagement extends ArrayList<Doctor> {
 	}
     }
 
-    public Doctor findDoctorByName(String name) {
-	if (this.isEmpty()) {
-	    System.out.println("The list is empty!!");
-	    return null;
-	} else {
-	    for (int i = 0; i < this.size(); i++) {
-		if (this.get(i).getName().equalsIgnoreCase(name)) {
-		    return this.get(i);
-		}
-	    }
-	}
-	return null;
-    }
-
     public void searchDoctor() {
 	ArrayList<Doctor> listDoctorFoundByName = new ArrayList<>();
 	if (this.isEmpty()) {
