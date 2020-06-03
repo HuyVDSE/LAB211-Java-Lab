@@ -110,6 +110,14 @@ public class Cabinet {
 	Collections.sort(HistoryList, HisorySalary.compareIdWorker);
     }
 
+    
+    public void printSalaryInfo(){
+	for (Worker worker : workerList) {
+	    System.out.printf("|%-10s|%-20s|%-10s|%-15s|%-15s|\n", 
+		    worker.getId(), worker.getName(), worker.getAge(), worker.getSalary(), worker.getWorkLocation());
+	}
+    }
+    
     public void initWorkerData() {
 	workerList.add(new Worker("W1", "Nguyen Van Hau", 28, 150, "VN"));
 	workerList.add(new Worker("W2", "Tran Thai Ha", 40, 200, "SG"));

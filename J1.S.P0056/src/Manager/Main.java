@@ -19,6 +19,7 @@ public class Main {
 	boolean isValid = true;
 	int choice;
 	cage.initWorkerData();
+	System.out.println("");
 	do {
 	    System.out.println("=========== Worker Management ===========");
 	    System.out.println("1. Add Worker");
@@ -46,6 +47,7 @@ public class Main {
 		    }
 		    break;
 		case 4:
+		    cage.printSalaryInfo();
 		    cage.sortByID();
 		    cage.printHistorySalary();
 		    break;
